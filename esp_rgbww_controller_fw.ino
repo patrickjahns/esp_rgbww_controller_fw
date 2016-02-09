@@ -11,6 +11,10 @@
 //Prefix for mdns hostname
 #define HOSTNAMEPREFIX "rgbww-"
 
+//Standard password for the default Wifi access
+//should be changed
+#define AP-PASSWORD "fhem"
+
 //RGBWW Pins
 #define BLUEPIN 14
 #define GREENPIN 12
@@ -97,7 +101,9 @@ void setup() {
     Serial.println(F("Booting"));
     
     //WiFiManager
-    wifiManager.autoConnect(hostname.c_str());
+    //first parameter is name of access point, second is the password
+    //wifiManager.autoConnect("AP-NAME", "AP-PASSWORD");
+    wifiManager.autoConnect(hostname.c_str(),AP-PASSWORD.c_str());
 
     //mdns
     if (!MDNS.begin(hostname.c_str())) {
