@@ -1,0 +1,15 @@
+{"rom" : {
+	"version": "0.1.0",
+	"url": "rom0.bin"
+	},
+ "webapp": {
+ 	"version": "0.1.1",
+ 	"url": [
+ 	"http://github.com/patrickjahns/esp_rgbww_firmware/release/init.html.gz",
+ 	"http://github.com/patrickjahns/esp_rgbww_firmware/release/index.html.gz",
+ 	"http://github.com/patrickjahns/esp_rgbww_firmware/release/app.min.css.gz",
+ 	"http://github.com/patrickjahns/esp_rgbww_firmware/release/app.min.js.gz"
+ 	]
+ }
+}
+
