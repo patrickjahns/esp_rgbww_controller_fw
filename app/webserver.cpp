@@ -763,11 +763,11 @@ void ApplicationWebserver::onColor(HttpRequest &request, HttpResponse &response)
 				String cmd = "solid";
 				bool q = false;
 
-				r = constrain(root["raw"]["r"].as<int>(), 0, 1023);
-				g = constrain(root["raw"]["g"].as<int>(), 0, 1023);
-				b = constrain(root["raw"]["b"].as<int>(), 0, 1023);
-				ww = constrain(root["raw"]["ww"].as<int>(), 0, 1023);
-				cw = constrain(root["raw"]["cw"].as<int>(), 0, 1023);
+				r = constrain(root["raw"]["r"].as<int>(), -1, 1023);
+				g = constrain(root["raw"]["g"].as<int>(), -1, 1023);
+				b = constrain(root["raw"]["b"].as<int>(), -1, 1023);
+				ww = constrain(root["raw"]["ww"].as<int>(), -1, 1023);
+				cw = constrain(root["raw"]["cw"].as<int>(), -1, 1023);
 				if (root["cmd"].success()) {
 					cmd = root["cmd"].asString();
 				}
