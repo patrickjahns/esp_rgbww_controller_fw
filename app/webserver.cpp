@@ -804,11 +804,11 @@ void ApplicationWebserver::onColor(HttpRequest &request, HttpResponse &response)
 					}
 					int from_r, from_g, from_b, from_ww, from_cw = 0;
 					ChannelOutput from_output;
-					from_r = constrain(root["raw"]["r"].as<int>(), 0, 1023);
-					from_g = constrain(root["raw"]["g"].as<int>(), 0, 1023);
-					from_b = constrain(root["raw"]["b"].as<int>(), 0, 1023);
-					from_ww = constrain(root["raw"]["ww"].as<int>(), 0, 1023);
-					from_cw = constrain(root["raw"]["cw"].as<int>(), 0, 1023);
+					from_r = constrain(root["raw"]["r"].as<int>(), -1, 1023);
+					from_g = constrain(root["raw"]["g"].as<int>(), -1, 1023);
+					from_b = constrain(root["raw"]["b"].as<int>(), -1, 1023);
+					from_ww = constrain(root["raw"]["ww"].as<int>(), -1, 1023);
+					from_cw = constrain(root["raw"]["cw"].as<int>(), -1, 1023);
 
 					from_output = ChannelOutput(from_r, from_g, from_b, from_ww, from_cw);
 					debugapp("ApplicationWebserver::onColor raw CMD:%s Q:%d FROM r:%i g:%i b:%i ww:%i cw:%i  TO r:%i g:%i b:%i ww:%i cw:%i",
